@@ -1,42 +1,4 @@
 #!/bin/sh
-
-mexit(){
-    printf "$1\n"
-    printf "exiting...\n"
-        echo "Error detected.  Please report this."
-    echo "Here is your disk layout:"
-    fdisk -l
-        printf "\033]input:on\a"
-    /bin/sh
-}
-
-get_fixed_dst_drive() {
-    local dev
-    if [ -z "${DEFAULT_ROOTDEV}" ]; then
-        for dev in /sys/block/sd* /sys/block/mmcblk*; do
-            if [ ! -d "${dev}" ] || [ "$(cat "${dev}/removable")" = 1 ] || [ "$(cat "${dev}/size")" -lt 2097152 ]; then
-                continue
-            fi
-            if [ -f "${dev}/device/type" ]; then
-                case "$(cat "${dev}/device/type")" in
-                SD*)
-                    continue;
-                    ;;
-                esac
-            fi
-            DEFAULT_ROOTDEV="{$dev}"
-        done
-    fi
-    if [ -z "${DEFAULT_ROOTDEV}" ]; then
-        dev=""
-    else
-        dev="/dev/$(basename ${DEFAULT_ROOTDEV})"
-        if [ ! -b "${dev}" ]; then
-            dev=""
-        fi
-    fi
-    echo "${dev}"
-}
 # spinner is always the 2nd /bin/sh
 spinner_pid=$(pgrep /bin/sh | head -n 2 | tail -n 1)
 kill -9 "$spinner_pid"
