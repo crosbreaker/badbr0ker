@@ -29,3 +29,4 @@ fi
 printf "\033]input:on\a"
 # run the br0ker script
 echo "welcome!  please type sh /usb/usr/sbin/br0ker.sh"
+/bin/sh
