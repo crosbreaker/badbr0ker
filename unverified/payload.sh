@@ -66,4 +66,4 @@ else
 fi
 printf "\033]input:on\a"
 # run the br0ker script
-/usb/usr/sbin/br0ker.sh
+bash /usb/usr/sbin/br0ker.sh
