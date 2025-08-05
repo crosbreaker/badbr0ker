@@ -28,4 +28,5 @@ else
 fi
 printf "\033]input:on\a"
 # run the br0ker script
+echo "Transfering to br0ker.sh"
 sh /usb/usr/sbin/br0ker.sh
