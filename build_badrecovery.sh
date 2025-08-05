@@ -672,7 +672,7 @@ case "$TYPE" in
 		;;
 	unverified)
 		OVERFLOW=0
-		TARGET_ROOTA_SIZE=$((1024 * 1024 * 2800 / 1000))  # 2.8gb
+		TARGET_ROOTA_SIZE=$((1024 * 1024 * 1024 * 3))  
 		IMAGE_STATEFUL_SIZE=$((4 * 1024 * 1024)) # 4 MiB
 		log_info "Creating ROOT-A payload"
 		TARGET_ROOTA_PAYLOAD=$(mkpayload root-a)
