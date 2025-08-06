@@ -2,8 +2,7 @@
 ```bash
 git clone https://github.com/crosbreaker/badbr0ker
 cd badbr0ker
-bash update_downloader.sh <board>
-sudo ./build_badrecovery.sh -i image.bin -t unverified
+sudo bash buildfull_badbr0ker.sh <board> <image.bin>
 ```
 ### [PREBUILTS](https://dl.fanqyxl.net/Crosbreaker/badbr0ker)
 ### Credits:
