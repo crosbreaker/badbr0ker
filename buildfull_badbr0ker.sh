@@ -20,7 +20,7 @@ elif [ "$board" == "corsola" ]; then
 elif [ "$board" == "brya" ]; then
     reco_name="chromeos_15823.60.0_brya_recovery_stable-channel_mp-v16"
 elif [ "$board" == "dedede" ]; then
-    reco_name="chromeos_16295.54.0_brya_recovery_stable-channel_BryaMPKeys-v20"
+    reco_name="chromeos_15823.60.0_dedede_recovery_stable-channel_mp-v48"
 else
     echo "Unsupported board. note: your board name must not be capitalized.  Please use another method to create badbr0ker, or contact us."
     exit 1
