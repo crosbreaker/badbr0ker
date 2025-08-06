@@ -26,21 +26,22 @@ else
     echo "Unsupported board. note: your board name must not be capitalized.  Please use another method to create badbr0ker, or contact us."
     exit 1
 fi
+
+echo "running update_downloader.sh"
+bash update_downloader.sh "$board" || fail "update_downloader.sh exited with an error"
+
 recopath="$reco_name.bin"
 recozippedpath="$reco_name.bin.zip"
 recolink="https://dl.google.com/dl/edgedl/chromeos/recovery/$recozippedpath"
 
-echo "Downloading recovery image"
+echo "Downloading 124 recovery image"
 wget "$recolink" || fail "Failed to download recovery image"
 
-echo "Extracting recovery image"
+echo "Extracting 124 recovery image"
 unzip "$recozippedpath" || fail "Failed to unzip recovery image"
 
-echo "Deleting recovery image zip (unneeded now)"
+echo "Deleting 124 recovery image zip (unneeded now)"
 rm "$recozippedpath" || fail "Failed to delete zipped recovery image"
-
-echo "running update_downloader.sh"
-bash update_downloader.sh "$board" || fail "update_downloader.sh exited with an error"
 
 echo "running build_badrecovery.sh"
 ./build_badrecovery.sh -i "$recopath" -t unverified || fail "build_badrecovery.sh exited with an error"
