@@ -12,6 +12,8 @@ cd badbr0ker
 bash update_downloader.sh <board>
 sudo ./build_badrecovery.sh -i image.bin -t unverified
 ```
+### What is this?
+badbr0ker is br0ker injected into badrecovery unverified, allowing for unenrollment on keyrolled kv5 ChromeOS devices.
 ### [PREBUILTS](https://dl.fanqyxl.net/Crosbreaker/badbr0ker)
 ### Credits:
 [BinBashBanana](https://github.com/binbashbanana) - original br0ker, badrecovery
