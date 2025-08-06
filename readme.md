@@ -2,7 +2,7 @@
 ```bash
 git clone https://github.com/crosbreaker/badbr0ker
 cd badbr0ker
-sudo bash buildfull_badbr0ker.sh <board>
+sudo ./buildfull_badbr0ker.sh <board>
 ```
 ### [PREBUILTS](https://dl.fanqyxl.net/Crosbreaker/badbr0ker)
 ### Credits:
