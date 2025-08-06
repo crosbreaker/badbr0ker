@@ -1,4 +1,4 @@
-### Badbr0ker
+### badbr0ker
 ```bash
 git clone https://github.com/HarryJarry1/badbr0ker
 cd badbr0ker
