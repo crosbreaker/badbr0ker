@@ -47,3 +47,4 @@ sudo ./build_badrecovery.sh -i "$recopath" -t unverified || fail "build_badrecov
 echo "Cleaning up directory"
 rm -rf unverified/16093
 echo "No errors detected while buildng the badbr0ker image"
+echo "File saved to $recopath"
