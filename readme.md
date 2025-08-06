@@ -5,3 +5,4 @@ cd badbr0ker
 bash update_downloader.sh <board>
 sudo ./build_badrecovery.sh -i image.bin -t unverified
 ```
+### [PREBUILTS](https://dl.fanqyxl.net/Crosbreaker/badbr0ker)
