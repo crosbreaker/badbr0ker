@@ -138,6 +138,7 @@ if [ $HAS_FRECON -eq 1 ]; then
 else
 	stty echo
 fi
-
+echo "launching br0ker.sh'
+sh /usb/usr/sbin/br0ker.sh
 printf "\033[?25h"
 while :; do sh; done
