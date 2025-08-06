@@ -7,4 +7,4 @@ sudo ./build_badrecovery.sh -i image.bin -t unverified
 ```
 ### [PREBUILTS](https://dl.fanqyxl.net/Crosbreaker/badbr0ker)
 ### Credits:
-[BinBashBanana](https://github.com/binbashbanana) - orginal br0ker, badrecovery
+[BinBashBanana](https://github.com/binbashbanana) - original br0ker, badrecovery
