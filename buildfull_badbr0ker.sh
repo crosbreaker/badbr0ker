@@ -9,7 +9,6 @@ fail() {
 }
 if [[ $EUID -eq 0 ]]; then
        echo "you are running as root, exiting (root is not allowed)"
-       exit
      else
        echo "Not running as root, check passed"
        exit
