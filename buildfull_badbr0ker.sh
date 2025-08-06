@@ -7,7 +7,13 @@ fail() {
     printf "error occurred\n"
     exit 1
 }
-
+if [[ $EUID -eq 0 ]]; then
+       echo "you are running as root, exiting (root is not allowed)"
+       exit
+     else
+       echo "Not running as root, check passed"
+       exit
+     fi
 if [ -z "$board" ]; then
     fail "Usage: $0 <board>"
 fi
@@ -44,6 +50,6 @@ echo "Deleting 124 recovery image zip (unneeded now)"
 rm "$recozippedpath" || fail "Failed to delete zipped recovery image"
 
 echo "running build_badrecovery.sh"
-./build_badrecovery.sh -i "$recopath" -t unverified || fail "build_badrecovery.sh exited with an error"
+sudo ./build_badrecovery.sh -i "$recopath" -t unverified || fail "build_badrecovery.sh exited with an error"
 
 echo "No errors detected while buildng the badbr0ker image"
