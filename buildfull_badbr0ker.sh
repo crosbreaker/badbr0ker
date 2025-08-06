@@ -7,12 +7,6 @@ fail() {
     printf "error occurred\n"
     exit 1
 }
-if [[ $EUID -eq 0 ]]; then
-       echo "you are running as root, exiting (root is not allowed)"
-     else
-       echo "Not running as root, check passed"
-       exit
-     fi
 if [ -z "$board" ]; then
     fail "Usage: $0 <board>"
 fi
