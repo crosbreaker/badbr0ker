@@ -180,8 +180,8 @@ done
 
 if [ -z "$USE_KERN" ]; then
 	[ -d "$PAYLOAD_DIR" ] || fail "Missing mounted payload directory! Ensure the USB drive/SD card is still plugged in!"
-	KERN_PAYLOAD="$PAYLOAD_DIR/updates/16093/$BOARD"/kern.gz
-	ROOT_PAYLOAD="$PAYLOAD_DIR/updates/16093/$BOARD"/root.gz
+	KERN_PAYLOAD="$PAYLOAD_DIR/16093/$BOARD"/kern.gz
+	ROOT_PAYLOAD="$PAYLOAD_DIR/16093/$BOARD"/root.gz
 	[ -f "$KERN_PAYLOAD" ] || fail "Required payload '$KERN_PAYLOAD' not found! Is this image built with the correct payload for Br0ker?"
 	[ -f "$ROOT_PAYLOAD" ] || fail "Required payload '$ROOT_PAYLOAD' not found! Is this image built with the correct payload for Br0ker?"
 
