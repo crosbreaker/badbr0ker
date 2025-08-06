@@ -44,5 +44,6 @@ rm "$recozippedpath" || fail "Failed to delete zipped recovery image"
 
 echo "running build_badrecovery.sh"
 sudo ./build_badrecovery.sh -i "$recopath" -t unverified || fail "build_badrecovery.sh exited with an error"
-
+echo "Cleaning up directory"
+rm -rf unverified/16093
 echo "No errors detected while buildng the badbr0ker image"
