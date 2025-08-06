@@ -1,7 +1,7 @@
 #!/bin/bash
 # simple paththrough script
-board = $1
-recopath = $2
+board=$1
+recopath=$2
 fail(){
 	printf "$1\n"
 	printf "error occurred\n"
