@@ -1,6 +1,6 @@
 ### badbr0ker
 ```bash
-git clone https://github.com/HarryJarry1/badbr0ker
+git clone https://github.com/crosbreaker/badbr0ker
 cd badbr0ker
 bash update_downloader.sh <board>
 sudo ./build_badrecovery.sh -i image.bin -t unverified
