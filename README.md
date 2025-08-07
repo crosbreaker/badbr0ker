@@ -18,5 +18,5 @@ badbr0ker is br0ker injected into badrecovery unverified, allowing for unenrollm
 Complete [sh1ttyOOBE](https://github.com/crosbreaker/sh1ttyOOBE), then enter developer mode and recover to your usb
 ### [PREBUILTS](https://dl.fanqyxl.net/Crosbreaker/badbr0ker)
 ### Credits:
-[BinBashBanana](https://github.com/binbashbanana) - original br0ker, badrecovery \
+[BinBashBanana](https://github.com/binbashbanana) - original br0ker, badrecovery
 [Lxrd](https://github.com/SPIRAME) - Sh1ttyOOBE
