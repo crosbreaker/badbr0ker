@@ -1,4 +1,6 @@
 ### badbr0ker
+# Support
+If you need any kind of support, please join our [discord server](https://discord.gg/nrMVY29MUb) for help
 ### If you would like the script to do everything for you:
 ```bash
 git clone https://github.com/crosbreaker/badbr0ker
@@ -16,7 +18,8 @@ sudo ./build_badrecovery.sh -i image.bin -t unverified
 badbr0ker is br0ker injected into badrecovery unverified, allowing for unenrollment on keyrolled kv5 ChromeOS devices.
 ### I have a usb, what now?
 Complete [sh1ttyOOBE](https://github.com/crosbreaker/sh1ttyOOBE), then enter developer mode and recover to your usb
-### [PREBUILTS](https://dl.fanqyxl.net/Crosbreaker/badbr0ker)
+### PREBUILTS
+[Fanqyxl's file host](https://dl.fanqyxl.net/Crosbreaker/badbr0ker) (it is perfectly safe, Fanqyxl had nothing to do with making this image, nor has he ever maliciously modified ChromeOS prebuilts.
 ### Credits:
 [BinBashBanana](https://github.com/binbashbanana) - original br0ker, badrecovery
 
