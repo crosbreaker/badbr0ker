@@ -25,7 +25,8 @@ else
     echo "Unsupported board. note: your board name must not be capitalized.  Please use another method to create badbr0ker, or contact us."
     exit 1
 fi
-
+missing_deps=$(check_deps partx sgdisk mkfs.ext4 cryptsetup lvm numfmt tar curl git python3 protoc gzip)
+[ "$missing_deps" ] && fail "The following required commands weren't found in PATH:\n${missing_deps}"
 echo "running update_downloader.sh"
 bash update_downloader.sh "$board" || fail "update_downloader.sh exited with an error"
 
