@@ -19,7 +19,7 @@ badbr0ker is br0ker injected into badrecovery unverified, allowing for unenrollm
 ### I have a usb, what now?
 Complete [sh1ttyOOBE](https://github.com/crosbreaker/sh1ttyOOBE), then enter developer mode and recover to your usb
 ### PREBUILTS
-[Fanqyxl's file host](https://dl.fanqyxl.net/Crosbreaker/badbr0ker) (it is perfectly safe, Fanqyxl had nothing to do with making this image, nor has he ever maliciously modified ChromeOS prebuilts.
+[Fanqyxl's file host](https://dl.fanqyxl.net/Crosbreaker/badbr0ker) (it is perfectly safe, Fanqyxl had nothing to do with making this image, I did. I checked the hash after uploading it, and it is unmodified. 
 ### Credits:
 [BinBashBanana](https://github.com/binbashbanana) - original br0ker, badrecovery
 
