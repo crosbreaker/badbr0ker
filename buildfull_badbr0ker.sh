@@ -1,5 +1,5 @@
 #!/bin/bash
-# simple passthrough script + downloading a 124 image
+# simple passthrough script + downloading a 129 image
 
 board=$1
 fail() {
