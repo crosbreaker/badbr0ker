@@ -12,15 +12,15 @@ if [ -z "$board" ]; then
 fi
 
 if [ "$board" == "nissa" ]; then
-    reco_name="chromeos_15823.60.0_nissa_recovery_stable-channel_mp-v21"
+    reco_name="chromeos_16002.60.0_nissa_recovery_stable-channel_mp-v32"
 elif [ "$board" == "skyrim" ]; then
-    reco_name="chromeos_15823.60.0_skyrim_recovery_stable-channel_mp-v7"
+    reco_name="chromeos_16002.60.0_skyrim_recovery_stable-channel_mp-v8"
 elif [ "$board" == "corsola" ]; then
-    reco_name="chromeos_15823.60.0_corsola_recovery_stable-channel_mp-v11"
+    reco_name="chromeos_16002.60.0_corsola_recovery_stable-channel_mp-v14"
 elif [ "$board" == "brya" ]; then
-    reco_name="chromeos_15823.60.0_brya_recovery_stable-channel_mp-v16"
+    reco_name="chromeos_16002.60.0_brya_recovery_stable-channel_mp-v18"
 elif [ "$board" == "dedede" ]; then
-    reco_name="chromeos_15823.60.0_dedede_recovery_stable-channel_mp-v48"
+    reco_name="chromeos_16002.60.0_dedede_recovery_stable-channel_mp-v50"
 else
     echo "Unsupported board. note: your board name must not be capitalized.  Please use another method to create badbr0ker, or contact us."
     exit 1
