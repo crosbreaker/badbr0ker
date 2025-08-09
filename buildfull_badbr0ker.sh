@@ -41,13 +41,13 @@ recopath="$reco_name.bin"
 recozippedpath="$reco_name.bin.zip"
 recolink="https://dl.google.com/dl/edgedl/chromeos/recovery/$recozippedpath"
 
-echo "Downloading 124 recovery image"
+echo "Downloading 129 recovery image"
 wget "$recolink" || fail "Failed to download recovery image"
 
-echo "Extracting 124 recovery image"
+echo "Extracting 129 recovery image"
 unzip "$recozippedpath" || fail "Failed to unzip recovery image"
 
-echo "Deleting 124 recovery image zip (unneeded now)"
+echo "Deleting 129 recovery image zip (unneeded now)"
 rm "$recozippedpath" || fail "Failed to delete zipped recovery image"
 
 echo "running build_badrecovery.sh"
