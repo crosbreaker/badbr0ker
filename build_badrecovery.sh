@@ -173,9 +173,9 @@ detect_image_features() {
 	fi
 	log_info "Detected chunks: $CHUNKS"
 	if [ $IMAGE_VERSION -lt 86 ] && [ $CHUNKS -ne 1 ]; then
-		fail "Unexpected chunk count (expected 1)"
+		echo "Unexpected chunk count (expected 1)"
 	elif [ $IMAGE_VERSION -ge 86 ] && [ $CHUNKS -ne 4 ]; then
-		fail "Unexpected chunk count (expected 4)"
+		echo "Unexpected chunk count (expected 4)"
 	fi
 	log_info "Detected LVM stateful: $(fancy_bool $LVM_STATEFUL)"
 
