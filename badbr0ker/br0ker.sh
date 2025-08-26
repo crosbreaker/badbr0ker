@@ -234,7 +234,7 @@ crossystem disable_dev_request=1 # grunt weirdness
 crossystem block_devmode=1 || :
 crossystem block_devmode=1
 
-echo "Finished! Press enter to reboot."
+echo "Finished! Press enter for shell"
 read -rs
-reboot -f
+/bin/sh
 sleep infinity
