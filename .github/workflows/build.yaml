@@ -5,7 +5,7 @@ jobs:
   build:
     strategy: 
       matrix:
-        board: [nissa, dedede, corsola, asurada, atlas, cherry, drallion, geralt, nocturne, rammus, rex, sarien, skyrim, staryu]
+        board: [nissa, dedede, corsola, asurada, atlas, cherry, drallion, geralt, nocturne, rammus, rex, sarien, skyrim, staryu, eve]
 
     runs-on: ubuntu-latest
     steps:
