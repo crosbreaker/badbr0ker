@@ -48,6 +48,11 @@ if [ -n "$2" ]; then
 else
 	mkdir -p "$OUT_DIR"
 fi
+if [ "$BOARD" = "eve" ]; then
+    # your command here
+    echo "BOARD is eve, you will need to manually recover to 132 :("
+	exit
+fi
 
 file_line=$(grep "^${BOARD}," "$URL_FILE") || fail "board '$BOARD' is not in board list"
 file_name=$(echo "$file_line" | cut -d, -f2)
