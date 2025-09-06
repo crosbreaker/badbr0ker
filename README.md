@@ -38,4 +38,4 @@ Complete [sh1ttyOOBE](https://github.com/crosbreaker/sh1ttyOOBE), then enter dev
 
 [Crossjbly](https://github.com/crossjbly) - Fixing a few things
 
-[codenerd](https://github.com/codenerd87) - adding more board support (everything but nissa and corsola(
+[codenerd](https://github.com/codenerd87) - adding more board support (everything but nissa, dedede and corsola)
