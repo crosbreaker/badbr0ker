@@ -30,7 +30,7 @@ Complete [sh1ttyOOBE](https://github.com/crosbreaker/sh1ttyOOBE), then enter dev
 
 [GitHub actions](https://nightly.link/crosbreaker/badbr0ker/actions/runs/17348879649)
 ### Credits:
-[HarryJarry1](https://github.com/HarryJarry1) - All badbr0ker development 
+[HarryTarryJarry](https://github.com/HarryTarryJarry) - All badbr0ker development 
 
 [BinBashBanana](https://github.com/binbashbanana) - original br0ker, badrecovery
 
