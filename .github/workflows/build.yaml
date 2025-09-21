@@ -20,7 +20,12 @@ jobs:
           sudo apt-get install -y pv
           sudo pip3 install protobuf six --break-system-packages
           sudo QUIET=1 bash buildfull_badbr0ker.sh "${{ matrix.board }}"
-      
+      - name: upload img as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: badbr0ker${{ matrix.board }}.bin
+          path: chromeos*.bin
+          compression-level: 7
       - name: compress the disk image
         if: startsWith(github.ref, 'refs/tags/')
         run: |
