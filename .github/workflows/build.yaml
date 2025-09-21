@@ -31,4 +31,4 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           draft: true
-          files: *.zip
+          files: badbr0ker*.zip
