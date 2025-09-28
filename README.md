@@ -23,7 +23,7 @@ Simply run the following in the shell, while connected to wifi:
 curl -LO https://ba.crosbreaker.dev/br0ker.sh && sh br0ker.sh
 ```
 ### How do I make a usb?
-Download an prebuilt from the [prebuilts section](#prebuilts), or build an image yourself with the above commands.  Flash it using the [Chromebook Recovery Utility](https://chromewebstore.google.com/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm), or anything else that etches disk images to USB drives. Such as [balenaEtcher](https://etcher.balena.io/), [dd](https://wiki.archlinux.org/title/Dd) or [rufus](https://rufus.ie/en/)
+Download a prebuilt from the [prebuilts section](#prebuilts), or build an image yourself with the above commands.  Flash it using the [Chromebook Recovery Utility](https://chromewebstore.google.com/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm), or anything else that etches disk images to USB drives. Such as [balenaEtcher](https://etcher.balena.io/), [dd](https://wiki.archlinux.org/title/Dd) or [rufus](https://rufus.ie/en/)
 ### I have a usb, what now?
 Complete [sh1ttyOOBE](https://github.com/crosbreaker/sh1ttyOOBE), then enter developer mode and recover to your usb
 ### Prebuilts
