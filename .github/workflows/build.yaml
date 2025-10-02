@@ -1,3 +1,4 @@
+# Thanks to https://github.com/ading2210/badrecovery for the orginal badrecovery workflow file
 on: workflow_dispatch
 
 jobs:
@@ -8,6 +9,16 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 32768
+          swap-size-mb: 64
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true'
+          remove-codeql: 'true'
+          remove-docker-images: 'true'
 
       - name: download repo
         uses: actions/checkout@v4
@@ -20,20 +31,10 @@ jobs:
           sudo apt-get install -y pv
           sudo pip3 install protobuf six --break-system-packages
           sudo QUIET=1 bash buildfull_badbr0ker.sh "${{ matrix.board }}"
-      - name: upload img as artifact
+
+      - name: upload img
         uses: actions/upload-artifact@v4
         with:
-          name: badbr0ker${{ matrix.board }}.bin
+          name: badbr0ker_${{ matrix.board }}
           path: chromeos*.bin
           compression-level: 7
-      - name: compress the disk image
-        if: startsWith(github.ref, 'refs/tags/')
-        run: |
-          sudo zip -9 badbr0ker_${{ matrix.board }}.zip chromeos*
-      
-      - name: create release
-        uses: ading2210/gh-large-releases@main
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          draft: true
-          files: badbr0ker*.zip
