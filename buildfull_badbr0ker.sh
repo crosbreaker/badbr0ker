@@ -38,13 +38,13 @@ check_deps() {
 		command -v "$dep" &>/dev/null || echo "$dep"
 	done
 }
-missing_deps=$(check_deps partx sgdisk mkfs.ext4 cryptsetup lvm numfmt tar curl git python3 protoc gzip jq)
+missing_deps=$(check_deps partx sgdisk mkfs.ext4 cryptsetup lvm numfmt tar curl wget git python3 protoc gzip jq)
 [ "$missing_deps" ] && fail "The following required commands weren't found in PATH:\n${missing_deps}"
 
 findimage
 
 echo "Downloading 129 recovery image"
-curl --progress-bar -k "$FINAL_URL" -o recovery.zip || fail "Failed to download recovery image"
+wget --show-progress "$FINAL_URL" -o recovery.zip || fail "Failed to download recovery image"
 
 echo "Extracting 129 recovery image"
 unzip recovery.zip || fail "Failed to unzip recovery image"
