@@ -25,9 +25,6 @@ check_deps() {
 
 missing_deps=$(check_deps curl git python3 protoc gzip)
 [ "$missing_deps" ] && fail "The following required commands weren't found in PATH:\n${missing_deps}"
-python3 -c "import google.protobuf" >/dev/null 2>&1 || fail "Please install the python package 'protobuf'"
-python3 -c "import argparse" >/dev/null 2>&1 || fail "Please install the python package 'argparse'"
-python3 -c "from six.moves import zip" >/dev/null 2>&1 || fail "Please install the python package 'six'"
 
 cleanup() {
 	[ -d "$WORKDIR" ] && rm -rf "$WORKDIR"
@@ -62,7 +59,7 @@ file_channel=$(echo "$file_name" | cut -d_ -f4)
 file_url="$UPDATE_SOURCE/$BOARD/$file_version/$file_channel/$file_name"
 
 echo "Downloading update payload..."
-curl "$file_url" -o "$WORKDIR/$file_name"
+wget --show-progress "$file_url" -O "$WORKDIR/$file_name"
 
 if ! [ -d "$UPDATE_ENGINE" ]; then
 	echo "Downloading update_engine..."

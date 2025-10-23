@@ -40,6 +40,11 @@ check_deps() {
 }
 missing_deps=$(check_deps partx sgdisk mkfs.ext4 cryptsetup lvm numfmt tar curl wget git python3 protoc gzip jq)
 [ "$missing_deps" ] && fail "The following required commands weren't found in PATH:\n${missing_deps}"
+if ! [ -f .venv ]; then
+	python3 -m venv .venv || fail "couldn't make python venv"
+	source .venv/bin/activate
+	pip install argparse protobuf six || fail "failed to download one or more of the following python packages: argparse, protobuf, six"
+fi
 
 findimage
 
@@ -54,6 +59,8 @@ rm recovery.zip || fail "Failed to delete zipped recovery image"
 
 #more murkmod code
 FILENAME=$(find . -maxdepth 2 -name "chromeos_*.bin") # 2 incase the zip format changes
+mv $FILENAME $board-badbr0ker.bin
+FILENAME=$(find . -maxdepth 2 -name "*-badbr0ker.bin")
 echo "Found recovery image from archive at $FILENAME"
 
 echo "running update_downloader.sh"
