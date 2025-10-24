@@ -46,7 +46,6 @@ else
 	mkdir -p "$OUT_DIR"
 fi
 if [ "$BOARD" = "eve" ]; then
-    # your command here
     echo "BOARD is eve, you will need to manually recover to 132 :("
 	exit
 fi
