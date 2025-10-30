@@ -7,10 +7,15 @@ fail() {
     printf "error occurred\n" >&2
     exit 1
 }
-if [ "$board" = "eve" ]; then
-    recoveryver=126
+if ! [ -z $1 ]; then
+	if [ "$board" = "eve" ]; then
+ 	   recoveryver=126
+	else
+ 	   recoveryver=129
+	fi
 else
-    recoveryver=129
+	echo "Usage: sudo bash ./buildfull_badrecovery.sh <board>"
+	exit 1
 fi
 findimage(){ # Taken from murkmod
     echo "Attempting to find recovery image from https://github.com/MercuryWorkshop/chromeos-releases-data data..."
