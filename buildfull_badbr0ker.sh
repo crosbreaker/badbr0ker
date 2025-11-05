@@ -64,7 +64,7 @@ rm recovery.zip || fail "Failed to delete zipped recovery image"
 
 #more murkmod code
 FIRSTFILENAME=$(find . -maxdepth 2 -name "chromeos_*.bin") # 2 incase the zip format changes
-FILENAME="$board-badbr0ker.bin"
+FILENAME="badbr0ker-$board.bin"
 mv "$FIRSTFILENAME" "$FILENAME"
 echo "Found recovery image from archive at $FILENAME"
 
