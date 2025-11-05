@@ -36,5 +36,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: badbr0ker_${{ matrix.board }}
-          path: chromeos*.bin
+          path: *badbr0ker.bin
           compression-level: 7
