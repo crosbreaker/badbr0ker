@@ -29,6 +29,8 @@ Complete [sh1ttyOOBE](https://github.com/crosbreaker/sh1ttyOOBE), then enter dev
 ### Prebuilts
 
 [GitHub actions](https://nightly.link/crosbreaker/badbr0ker/actions/runs/19094111320)
+### There is no prebuilt for my board!
+You're device is ethier vulnerable to sh1mmer, or is extremely new (released after early 2025). If you're device is too new, you unfortunately can't really do anything. However, if you're device is vulnerable to sh1mmer, you can use [regular br0ker](https://github.com/ading2210/sh1mmer/releases/latest). This project is only meant for devices thah are not vulnerable to the normal sh1mmer version of br0ker, and should never be used over that.
 ### Credits:
 [HarryTarryJarry](https://github.com/HarryTarryJarry) - All badbr0ker development 
 
